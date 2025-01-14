@@ -35,7 +35,7 @@ export const Header = () => {
 
     return (
         <>
-            <AppBar position="static">
+            <AppBar position="static" style={{color:'rgb(100, 0, 130)'}}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <MovieIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -47,7 +47,7 @@ export const Header = () => {
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
                                 onClick={handleOpenNavMenu}
-                                color="inherit"
+                                color="rgb(100, 0, 130)"
                             >
                                 <MenuIcon />
                             </IconButton>
