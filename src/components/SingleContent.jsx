@@ -10,27 +10,26 @@ import { DetailModal } from './DetailModel';
 export const SingleContent = ({ id, poster_path, title, name, release_date, first_air_date, media_type, vote_average, type }) => {
     const [open, setOpen] = React.useState(false);
 
-    return (
-        <>
-            <Card sx={{ maxWidth: 345 }}>
-                <CardActionArea onClick={() => setOpen(true)}>
-                    <CardMedia
-                        sx={{ height: 550 }}
-                        image={poster_path ? img_300 + poster_path : imgUnavailable}
-                        title={title || name}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            {title || name}
-                        </Typography>
-                        <Typography variant="body2" sx={{ color: 'text.secondary', display: 'flex', justifyContent: 'space-between' }}>
-                            <span>{media_type}</span> <span>{release_date || first_air_date}</span>
-                        </Typography>
-                        <span style={{ position: 'absolute', top: 0, right: 0, color: 'white', border: '1px solid white', borderRadius: '50%', padding: '2px' }}>{vote_average.toFixed(2)}</span>
-                    </CardContent>
-                </CardActionArea>
-            </Card>
-            {open && <DetailModal open={open} setOpen={setOpen} id={id} media_type={media_type||type} />}
-        </>
+    return (<>
+        <Card sx={{ maxWidth: 345 }} style={{height: "40rem", width: "10rem"}}>
+            <CardActionArea onClick={() => setOpen(true)}>
+                <CardMedia
+                    style={{height: "30rem"}}
+                    image={poster_path ? img_300 + poster_path : imgUnavailable}
+                    title={title || name}
+                />
+                <CardContent style={{height: "10rem"}}>
+                    <Typography gutterBottom variant="h5" component="div">
+                        {title || name}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: 'text.secondary', display: 'flex', justifyContent: 'space-between' }}>
+                        <span>{media_type}</span> <span>{release_date || first_air_date}</span>
+                    </Typography>
+                    <span style={{ position: 'absolute', top: 0, right: 0, color: 'white', border: '1px solid white', borderRadius: '50%', padding: '2px' }}>{vote_average.toFixed(2)}</span>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+        {open && <DetailModal open={open} setOpen={setOpen} id={id} media_type={media_type||type} />}
+    </>
     );
 }
