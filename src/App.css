@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 div{
     background: #4568DC;
     background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
@@ -21,7 +25,6 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
     padding: 10px;
     gap: 5px;
@@ -38,4 +41,32 @@ a {
     max-width: 100px;
     box-shadow: 0 0 5px gray;
     pointer-events: none;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: xx-large;
+    gap: 10px;
+    background-color: none;
+}
+
+input{
+    width: 250px;
+    height: 30px;
+    background-color: #B06AB3;
+    border: none;
+}
+
+button{
+    width: 100px;
+    height:50px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-left: 15px;
+    border: none;
+    font-family: "Bebas Neue", serif !important;
+    background-color: #B06AB3;
 }

@@ -19,11 +19,13 @@ export const Content = ({ url, type }) => {
     console.log(data.results, data.total_pages);
 
     return (
-        <div className='card'>
-            {data.results.map(obj =>
-                <SingleContent key={obj.id} {...obj} type={type} />
-            )}
-            <ContentPagination page={page} setPage={setPage} numberOfPage={data.total_pages}/>
+        <div style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center'}}>
+            <div className='card'>
+                {data.results.map(obj =>
+                    <SingleContent key={obj.id} {...obj} type={type} />
+                )}
+            </div>
+            <ContentPagination page={page} setPage={setPage} numberOfPage={data.total_pages} />
         </div>
     )
 }

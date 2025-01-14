@@ -36,7 +36,7 @@ export const Header = () => {
     return (
         <>
             <AppBar position="static" style={{color:'rgb(100, 0, 130)'}}>
-                <Container maxWidth="xl">
+                <Container maxWidth="100%">
                     <Toolbar disableGutters>
                         <MovieIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                         {/*mobile*/}

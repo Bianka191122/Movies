@@ -9,10 +9,10 @@ export const SearchPage = () => {
   const [type, setType] = useState('movie')
   const inputSearch = useRef()
 
-  const urlSearch = `https://api.themoviedb.org/3/search/${media_type}?api_key=${import.meta.env.VITE_API_KEY}&include_adult=false&query=${searchText}&page=${page}`;
-
+  const urlSearch = `https://api.themoviedb.org/3/search/${type}?api_key=${import.meta.env.VITE_API_KEY}&include_adult=false&query=${search}&page=${1}`;
+  
   return (
-    <div className='flex items-center flex-col gap-4 mt-4'>
+    <div className='search flex items-center flex-col gap-4 mt-4'>
       <div className='border-2 border-blue-500 rounded-1g w-max2'>
         < input ref={inputSearch} type="text" className='outline-none px-3 border-r-2 border-blue-500 py-2 bg-transparent' />
         <button onClick={() => setSearch(inputSearch.current.value)} className='px-2'>Keresés</button>
